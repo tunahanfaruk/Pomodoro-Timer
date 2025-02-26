@@ -1,2 +1,2 @@
 # Pomodoro-Timer
-A pomodoro timer that writen in Python
+A simple pomodoro timer that writen in Python
