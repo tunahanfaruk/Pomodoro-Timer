@@ -34,7 +34,7 @@ class PomodoroThread(QThread):
                         time.sleep(1)
 
 
-# Ana pencere sınıfı
+
 class PomodoroApp(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -42,23 +42,23 @@ class PomodoroApp(QMainWindow):
         self.setWindowTitle("Pomodoro Timer")
         self.setGeometry(100, 100, 400, 300)
 
-        # Karanlık tema uygula
+     
         self.set_dark_theme()
 
-        # Ana widget
+    
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
-        # Layout
+        
         self.layout = QVBoxLayout(self.central_widget)
 
-        # Başlık etiketi
+        
         self.title_label = QLabel("Pomodoro Timer")
         self.title_label.setFont(QFont("Arial", 18, QFont.Bold))
         self.title_label.setStyleSheet("color: #FFFFFF;")
         self.layout.addWidget(self.title_label)
 
-        # Giriş alanları
+        
         self.pomodoro_label = QLabel("time for the pomodoro (as_minute):")
         self.pomodoro_label.setStyleSheet("color: #FFFFFF; font-size: 14px;")
         self.layout.addWidget(self.pomodoro_label)
@@ -159,12 +159,12 @@ class PomodoroApp(QMainWindow):
         except ValueError:
             QMessageBox.warning(self, "please enter new numbers")
 
-    # Zamanlayıcıyı güncelleme fonksiyonu
+    
     def update_timer(self, text):
         self.timer_label.setText(text)
 
 
-# Uygulamayı çalıştır
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = PomodoroApp()
